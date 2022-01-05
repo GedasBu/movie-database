@@ -1,4 +1,5 @@
 import React from "react";
+import Movie from "./Movie";
 
 class SearchField extends React.Component{
     constructor() {
@@ -34,7 +35,7 @@ class SearchField extends React.Component{
             );
     }
 render(){
-    console.log(this.state.movies)
+    console.log(this.state.movies.title)
     return(
         <div>
             <p>Paieska</p>
@@ -42,6 +43,7 @@ render(){
             <input type="text" placeholder="Iveskite pavadinima" onChange={this.handleChange} value={this.state.search}></input>
             <button>Ieskoti</button>
             </form>
+            <Movie movies={this.state.movies}/>
         </div>
     )
 }
